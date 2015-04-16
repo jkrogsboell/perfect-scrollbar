@@ -199,6 +199,12 @@ $('#container').perfectScrollbar('update');  // Update
 $('#container').perfectScrollbar('destroy'); // Destroy
 ```
 
+## GWT 
+
+How to use in gwt
+
+
+
 ## Optional parameters
 
 perfect-scrollbar supports optional parameters.
