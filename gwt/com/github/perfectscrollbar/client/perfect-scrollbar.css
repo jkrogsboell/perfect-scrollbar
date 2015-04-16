@@ -38,10 +38,11 @@
 .ps-container>.ps-scrollbar-x-rail {
 	display: none;
 	position: absolute;
-	/* please don't change 'position' */ /*    -webkit-border-radius: 4px;
+	/* please don't change 'position' */ 
+	-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    border-radius: 4px;*/
+    border-radius: 4px;
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity = 0);
@@ -58,10 +59,10 @@
 	position: absolute;
 	/* please don't change 'position' */
 	background-color: #aaa;
-	/*-webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      border-radius: 4px;*/
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
 	-webkit-transition: background-color .2s linear;
 	-moz-transition: background-color .2s linear;
 	-o-transition: background-color .2s linear;
@@ -74,10 +75,11 @@
 .ps-container>.ps-scrollbar-y-rail {
 	display: none;
 	position: absolute;
-	/* please don't change 'position' */ /*-webkit-border-radius: 4px;
+	/* please don't change 'position' */ 
+	-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
-    border-radius: 4px;*/
+    border-radius: 4px;
 	opacity: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity = 0);
@@ -85,7 +87,7 @@
 	-moz-transition: background-color .2s linear, opacity .2s linear;
 	-o-transition: background-color .2s linear, opacity .2s linear;
 	transition: background-color .2s linear, opacity .2s linear;
-	right: 0px; /*right: 3px;*/
+	right: 3px;
 	/* there must be 'right' for ps-scrollbar-y-rail */
 	width: 8px;
 }
@@ -94,10 +96,10 @@
 	position: absolute;
 	/* please don't change 'position' */
 	background-color: #aaa;
-	/* -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      border-radius: 4px; */
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; 
 	-webkit-transition: background-color .2s linear;
 	-moz-transition: background-color .2s linear;
 	-o-transition: background-color .2s linear;

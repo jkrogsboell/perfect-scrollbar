@@ -201,9 +201,16 @@ $('#container').perfectScrollbar('destroy'); // Destroy
 
 ## GWT 
 
-How to use in gwt
+In your module file use one of the following includes:
+```html
+<inherits name='com.github.perfectscrollbar.PerfectScrollbar'/> 
+```
+or
+```html
+<inherits name='com.github.perfectscrollbar.PerfectScrollbarNoResources'/>
+```
 
-
+Detailed explaination is available in [gwt/README.md](https://github.com/jkrogsboell/perfect-scrollbar/blob/master/gwt/README.md)
 
 ## Optional parameters
 
