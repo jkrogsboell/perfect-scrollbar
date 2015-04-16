@@ -8,6 +8,7 @@ CustomScrollPanel also uses native scrolling, but allows content to use the enti
 Also the scrollbars do not show on mobile devices.  
 
 The GWT wrapper for perfect-scrollbar brings you "perfect" scrolling in a GWT like manner and can replace ScrollPanel and CustomScrollPanel if you're brave enough.
+Included in the client is compiled javascript and unminified css for perfect-scrollbar version 0.6.2.
 
 ## How to use
 
@@ -19,6 +20,7 @@ or
 ```html
 <inherits name='com.github.perfectscrollbar.PerfectScrollbarNoResources'/>
 ```
+
 
 PerfectScrollbarPanel implements HasScrolling like ScrollPanel, but allows you to add multiple Panels because it extends FlowPanel rather than SimplePanel.
 
