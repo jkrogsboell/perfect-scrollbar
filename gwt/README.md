@@ -3,7 +3,7 @@
 ## Why GWT PerfectScrollbar?
 
 In GWT you can use ScrollPanel or CustomScrollPanel to add scrollbars to your components. 
-The standard ScrollPanel is using native scrolling, which means browser/os look and feel and reduced viewport size, when scrollbars are added.
+The standard ScrollPanel is using native scrolling, which means browser/os look and feel and reduced viewport size when scrollbars are added.
 CustomScrollPanel also uses native scrolling, but allows content to use the entire viewport. 
 Also the scrollbars do not show on mobile devices.  
 
@@ -11,7 +11,7 @@ The GWT wrapper for perfect-scrollbar brings you "perfect" scrolling in a GWT li
 
 ## How to use
 
-In your module file use one of the following includes:
+In your module file, use one of the following includes:
 ```html
 <inherits name='com.github.perfectscrollbar.PerfectScrollbar'/> 
 ```
