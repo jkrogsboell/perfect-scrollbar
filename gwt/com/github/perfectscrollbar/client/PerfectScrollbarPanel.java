@@ -62,32 +62,39 @@ public class PerfectScrollbarPanel extends FlowPanel implements HasScrolling //S
    {
       super.onAttach();
 
-      Scheduler.get().scheduleFinally(new ScheduledCommand()
+      if(!initialized) 
       {
-         @Override
-         public void execute()
+         Scheduler.get().scheduleFinally(new ScheduledCommand()
          {
-            PerfectScrollbarPanel that = PerfectScrollbarPanel.this;
-            that.initalizePerfectScrollbar(that.getElement());
-            initialized = true;
-
-            if (top_cache != -1 && left_cache != -1)
+            @Override
+            public void execute()
             {
-               that.scrollTopLeftJSNI(getElement(), top_cache, left_cache);
+               PerfectScrollbarPanel that = PerfectScrollbarPanel.this;
+               that.initalizePerfectScrollbar(that.getElement());
+               initialized = true;
+   
+               if (top_cache != -1 && left_cache != -1)
+               {
+                  that.scrollTopLeftJSNI(getElement(), top_cache, left_cache);
+               }
+               else if (top_cache != -1)
+               {
+                  that.scrollTopJSNI(getElement(), top_cache);
+               }
+               else if (left_cache != -1)
+               {
+                  that.scrollLeftJSNI(getElement(), left_cache);
+               }
+   
+               top_cache = -1;
+               left_cache = -1;
             }
-            else if (top_cache != -1)
-            {
-               that.scrollTopJSNI(getElement(), top_cache);
-            }
-            else if (left_cache != -1)
-            {
-               that.scrollLeftJSNI(getElement(), left_cache);
-            }
-
-            top_cache = -1;
-            left_cache = -1;
-         }
-      });
+         });
+      }
+      else
+      {
+         update();
+      }
    }
 
    private boolean initialized = false;
@@ -102,9 +109,15 @@ public class PerfectScrollbarPanel extends FlowPanel implements HasScrolling //S
    public void onDetach()
    {
       super.onDetach();
-      //chrome 42 error on reattach //chrome 44 works just fine
-//    initialized = false;
-//    destroy(getElement());
+      //chrome 42 error //chrome 44 works just fine
+//      initialized = false;
+//      destroy(getElement());
+   }
+
+   public void doDestroy()
+   {
+      initialized = false;
+      destroy(getElement());
    }
 
    @Override
