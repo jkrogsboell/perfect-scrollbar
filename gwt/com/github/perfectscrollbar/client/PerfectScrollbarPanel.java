@@ -102,8 +102,9 @@ public class PerfectScrollbarPanel extends FlowPanel implements HasScrolling //S
    public void onDetach()
    {
       super.onDetach();
-      initialized = false;
-      destroy(getElement());
+      //chrome 42 error on reattach //chrome 44 works just fine
+//    initialized = false;
+//    destroy(getElement());
    }
 
    @Override
